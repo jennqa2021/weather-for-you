@@ -1,3 +1,189 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 h1 {
-  color: blue;
+  margin: 20px 0 0 50px;
+}
+form {
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 250px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.units {
+  position: relative;
+  top: -50px;
+}
+
+.currentTemp {
+  font-size: 75px;
+  margin-left: 55px;
+  font-weight: bold;
+  position: relative;
+  top: -10px;
+}
+
+.emoji {
+  color: rgb(243, 136, 15);
+  text-align: center;
+  font-size: 50px;
+}
+
+.col-sm {
+  background: rgb(11, 47, 126);
+  border: 3px solid black;
+  padding: 4px 10px;
+  text-align: center;
+  line-height: 48px;
+  margin: 50px 10px;
+  position: relative;
+  max-width: 75%;
+  border-radius: 10px;
+  color: white;
+  box-shadow: rgb(37 39 89 / 50%) 4px 8px 8px 0;
+}
+
+.high-low {
+  border: 3px solid black;
+  padding: 4px 10px;
+  text-align: left;
+  line-height: 36px;
+  max-width: 250px;
+  border-radius: 10px;
+  max-height: 80px;
+  position: relative;
+  bottom: 30px;
+  left: 50px;
+}
+
+.expected-temp {
+  margin-right: 0;
+  padding-right: 0;
+}
+.searchCity {
+  padding: 10px 30px 10px 10px;
+  font-size: 20px;
+  margin: 0 10px;
+  min-width: 50%;
+  border-radius: 10px;
+  background: whitesmoke;
+  box-shadow: rgb(37 39 89 / 20%) 0px 8px 8px 0;
+}
+
+.check-weather {
+  padding: 10px;
+  font-size: 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+
+  color: white;
+  background: rgb(11, 47, 126);
+  font-weight: 650;
+  box-shadow: rgb(37 39 89 / 20%) 0px 8px 8px 0;
+  transition: all 200ms ease-in-out;
+}
+
+.location {
+  background-color: rgb(63, 116, 11);
+}
+.check-weather:hover {
+  background: #6e88a1;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.city {
+  font-size: 34px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.currentEvent {
+  font-size: 18px;
+  margin: 0 0 0 50px;
+}
+
+.descript {
+  text-transform: capitalize;
+}
+.temp {
+  font-size: 80px;
+  font-weight: 900;
+  margin-left: 50px;
+  position: relative;
+  bottom: 10px;
+}
+
+.main-emoji {
+  color: rgba(243, 137, 15, 0.733);
+  font-size: 100px;
+  display: inline;
+  position: relative;
+  left: 5px;
+  bottom: 15px;
+}
+
+.outline {
+  max-width: 65%;
+  border: 3px solid rgb(11, 47, 126);
+  margin-top: 40px;
+  border-radius: 10px;
+  background: linear-gradient(
+    180.3deg,
+    rgb(221, 221, 221) 5.5%,
+    rgb(110, 136, 161) 90.2%
+  );
+}
+
+.signature {
+  font-family: rochester;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+button {
+  background-color: #cdd1d4;
+  border-radius: 10px;
+  padding: 0px;
+  color: none;
+  border: none;
+}
+
+.fa-search-location {
+  color: whitesmoke;
+
+  padding: 10px;
+  font-size: 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+
+  background: rgb(11, 47, 126);
+  font-weight: 650;
+  box-shadow: rgb(37 39 89 / 20%) 0px 8px 8px 0;
+  transition: all 200ms ease-in-out;
+}
+
+.fa-search-location:hover {
+  background: #6e88a1;
+  font-weight: 650;
+  cursor: pointer;
+}
+.search {
+  display: inline;
 }
