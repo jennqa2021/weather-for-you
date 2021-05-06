@@ -38,24 +38,16 @@
             <i class="fas fa-search-location"></i>
           </button>
         </form>
+<div class="row">
+  <div class="col-6">
 
         <h1 class="city" id="city"></h1>
         <ul>
           <li class="currentEvent" id="date"></li>
           <li class="currentEvent descript" id="temperature-description"></li>
         </ul>
-
-        <div class="row">
-          <div class="col-6 expected-temp">
-            <span class="currentTemp" id="temperature-now"></span>
-            <span class="units">
-              <a href="#" id="celcius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
-
-            <i class="far fa-sun main-emoji"></i>
-          </div>
-          <div class="col-6 high-low">
+</div>
+<div class="col-6 high-low">
             <ul>
               <li>
                 <span class="heading"> High:</span>
@@ -67,6 +59,17 @@
             </ul>
           </div>
         </div>
+        <div class="row">
+          <div class="col-10 expected-temp">
+            <span class="currentTemp" id="temperature-now"></span>
+            <span class="units">
+              <a href="#" id="celcius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+
+            <i class="far fa-sun main-emoji"></i>
+          </div>
+          
 
         <div class="container overflow-hidden">
           <div class="row gy-5">

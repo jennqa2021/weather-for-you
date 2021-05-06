@@ -63,12 +63,12 @@ a {
   border: 3px solid black;
   padding: 4px 10px;
   text-align: left;
-  line-height: 36px;
+  line-height: 30px;
   max-width: 250px;
   border-radius: 10px;
   max-height: 80px;
   position: relative;
-  bottom: 30px;
+  top: 23px;
   left: 50px;
 }
 
@@ -189,6 +189,5 @@ button {
 }
 
 .gitLink {
-  
   color: white;
 }
