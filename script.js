@@ -74,6 +74,8 @@ function showTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = Math.round(response.data.main.humidity);
 }
 
 let locationButton = document.querySelector("#location-button");
