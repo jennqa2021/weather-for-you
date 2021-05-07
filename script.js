@@ -96,9 +96,13 @@ function displayFahTemp(event) {
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahTemp);
 
-search("Dallas");
+let celLink = document.querySelector("#cel-link");
+celLink.addEventListener("click", displayCelTemp);
 
 function displayCelTemp(event) {
   event.preventDefault();
-  alert("hi");
+  let temperature = document.querySelector("#temperature-now");
+  temperature.innerHTML = Math.round(celcuisTemp);
 }
+
+search("Dallas");
