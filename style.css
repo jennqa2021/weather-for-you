@@ -32,7 +32,7 @@ li::first-letter {
 
 img {
   position: relative;
-  left: -42px;
+  left: -7px;
   bottom: 36px;
   width: 175px;
 }
@@ -44,7 +44,7 @@ img {
 
 .currentTemp {
   font-size: 75px;
-  margin-left: 55px;
+  margin-left: 45px;
   font-weight: bold;
   position: relative;
   top: -10px;
@@ -124,14 +124,6 @@ img {
 .currentEvent {
   font-size: 18px;
   margin: 0 0 0 20px;
-}
-
-.temp {
-  font-size: 80px;
-  font-weight: 900;
-  margin-left: 50px;
-  position: relative;
-  bottom: 10px;
 }
 
 .outline {

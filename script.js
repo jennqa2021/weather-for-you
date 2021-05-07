@@ -55,28 +55,28 @@ function showTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentPlace = response.data.name;
   let title = document.querySelector("h1");
-
-  title.innerHTML = `${currentPlace}`;
   let temperatureHere = document.querySelector("#temperature-now");
-  temperatureHere.innerHTML = `${temperature}`;
-
-  console.log(response.data);
-
   let description = document.querySelector("#temperature-description");
-
-  description.innerHTML = response.data.weather[0].description;
   let namedCity = document.querySelector("#city");
-  namedCity.innerHTML = response.data.name;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = Math.round(response.data.wind.speed * 3.6);
   let icon = document.querySelector("#icon");
+  let humidity = document.querySelector("#humidity");
+  celcuisTemp = response.data.main.temp;
+  temperatureHere.innerHTML = `${temperature}`;
+  console.log(response.data);
+  title.innerHTML = `${currentPlace}`;
+  description.innerHTML = response.data.weather[0].description;
+  namedCity.innerHTML = response.data.name;
+  wind.innerHTML = Math.round(response.data.wind.speed * 3.6);
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  let humidity = document.querySelector("#humidity");
+
   humidity.innerHTML = Math.round(response.data.main.humidity);
 }
+
+let celcuisTemp = null;
 
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", handleClick);
@@ -86,4 +86,19 @@ function handleClick(event) {
   navigator.geolocation.getCurrentPosition(currentPosition);
 }
 
+function displayFahTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celcuisTemp * 9) / 5 + 32;
+  let temperature = document.querySelector("#temperature-now");
+  temperature.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahTemp);
+
 search("Dallas");
+
+function displayCelTemp(event) {
+  event.preventDefault();
+  alert("hi");
+}
