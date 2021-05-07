@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+li::first-letter {
+  text-transform: capitalize;
+}
+
 .units {
   position: relative;
   top: -50px;
@@ -119,9 +123,6 @@ a {
   margin: 0 0 0 20px;
 }
 
-.descript {
-  text-transform: capitalize;
-}
 .temp {
   font-size: 80px;
   font-weight: 900;

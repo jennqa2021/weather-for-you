@@ -57,6 +57,7 @@ function showTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentPlace = response.data.name;
   let title = document.querySelector("h1");
+
   title.innerHTML = `${currentPlace}`;
   let temperatureHere = document.querySelector("#temperature-now");
   temperatureHere.innerHTML = `${temperature}`;
@@ -68,6 +69,13 @@ function showTemp(response) {
   description.innerHTML = response.data.weather[0].description;
   let namedCity = document.querySelector("#city");
   namedCity.innerHTML = response.data.name;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let locationButton = document.querySelector("#location-button");
