@@ -30,6 +30,13 @@ li::first-letter {
   text-transform: capitalize;
 }
 
+img {
+  position: relative;
+  left: -42px;
+  bottom: 36px;
+  width: 175px;
+}
+
 .units {
   position: relative;
   top: -50px;
@@ -76,10 +83,6 @@ li::first-letter {
   left: 50px;
 }
 
-.expected-temp {
-  margin-right: 0;
-  padding-right: 0;
-}
 .searchCity {
   padding: 10px 30px 10px 10px;
   font-size: 20px;
@@ -129,15 +132,6 @@ li::first-letter {
   margin-left: 50px;
   position: relative;
   bottom: 10px;
-}
-
-.main-emoji {
-  color: rgba(243, 137, 15, 0.733);
-  font-size: 100px;
-  display: inline;
-  position: relative;
-  left: 5px;
-  bottom: 15px;
 }
 
 .outline {

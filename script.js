@@ -45,8 +45,6 @@ function search(city) {
 function currentPosition(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
-  console.log(lat);
-  console.log(long);
   let apiKey = "d89748fc4cee1bf5df210fac0fce9c47";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
 
@@ -70,7 +68,7 @@ function showTemp(response) {
   let namedCity = document.querySelector("#city");
   namedCity.innerHTML = response.data.name;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = Math.round(response.data.wind.speed);
+  wind.innerHTML = Math.round(response.data.wind.speed * 3.6);
   let icon = document.querySelector("#icon");
   icon.setAttribute(
     "src",
