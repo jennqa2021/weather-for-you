@@ -178,3 +178,8 @@ button {
 .gitLink {
   color: white;
 }
+
+.expected-temp .active {
+  color: black;
+  cursor: default;
+}

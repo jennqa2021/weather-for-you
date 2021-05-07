@@ -90,6 +90,8 @@ function displayFahTemp(event) {
   event.preventDefault();
   let fahrenheitTemp = (celcuisTemp * 9) / 5 + 32;
   let temperature = document.querySelector("#temperature-now");
+  celLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   temperature.innerHTML = Math.round(fahrenheitTemp);
 }
 
@@ -102,6 +104,8 @@ celLink.addEventListener("click", displayCelTemp);
 function displayCelTemp(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature-now");
+  celLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   temperature.innerHTML = Math.round(celcuisTemp);
 }
 
