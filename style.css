@@ -37,6 +37,13 @@ img {
   width: 175px;
 }
 
+i .fas {
+  position: relative;
+  color: rgba(243, 137, 15, 0.87);
+  font-size: 90px;
+  padding-bottom: 25px;
+}
+
 .units {
   position: relative;
   top: -50px;

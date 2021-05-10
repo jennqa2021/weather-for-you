@@ -110,3 +110,30 @@ function displayCelTemp(event) {
 }
 
 search("Dallas");
+
+//// Added icons and function for forecast
+
+let icons = {
+  "01d": "fa-sun", // Clear sky day,
+  "01n": "fa-moon", // Clear sky night
+  "02d": "fa-cloud-sun", // Few clouds day
+  "02n": "fa-cloud-moon", // Few clouds night
+  "03d": "fa-cloud", // Scattered clouds day
+  "03n": "fa-cloud", // Scattered clouds night
+  "04d": "fa-cloud", // Broken clouds day
+  "04n": "fa-cloud", // Broken clouds night
+  "09d": "fa-cloud-showers-heavy", // Shower rain day
+  "09n": "fa-cloud-showers-heavy", // Shower rain night
+  "10d": "fa-cloud-rain", // Rain day
+  "10n": "fa-cloud-rain", // Rain night
+  "11d": "fa-bolt", // Thunderstorm day
+  "11n": "fa-bolt", // Thunderstorm night
+  "13d": "fa-snowflake", // Snow day
+  "13n": "fa-snowflake", // Snow sky night
+  "50d": "fa-smog", // Mist day
+  "50n": "fa-smog", // Mist night
+};
+
+icon.innerHTML = `<i class="fas ${
+  icons[response.data.weather[0].icon]
+}" id="current-weather-icon"></i>`;
