@@ -61,6 +61,8 @@ i .fas {
   color: rgb(243, 136, 15);
   text-align: center;
   font-size: 50px;
+  width: 100px;
+  bottom: 0px;
 }
 
 .col-sm {
@@ -68,10 +70,10 @@ i .fas {
   border: 3px solid black;
   padding: 4px 10px;
   text-align: center;
-  line-height: 48px;
-  margin: 50px 10px;
+  line-height: 40px;
+  margin: 50px 6px;
   position: relative;
-  max-width: 20%;
+  max-width: 18%;
   border-radius: 10px;
   color: white;
   box-shadow: rgb(37 39 89 / 50%) 4px 8px 8px 0;

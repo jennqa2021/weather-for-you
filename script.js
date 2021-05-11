@@ -85,27 +85,47 @@ function showTemp(response) {
   getForecast(response.data.coord);
 }
 
+function formatForecast(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let fday = date.getDay();
+  let fdays = ["Sunday", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  return fdays[fday];
+}
+
 function showForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row gy-5">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  let forecastHTML = `<span class="row gy-5">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="col-sm">
-      <span class="heading">${day}</span>
-         <div class="emoji"><i class="far fa-sun sun"></i>
-         </div>
+      <span class="heading">${formatForecast(forecastDay.dt)}</span>
+         <img class="emoji"
+         src="http://openweathermap.org/img/wn/${
+           forecastDay.weather[0].icon
+         }@2x.png"
+         width="42"
          <div>
-              <span class="forecast-max"><strong>80°</strong></span>
-              <span class="forecast-min">/ 65°</span></div>
+              <span class="forecast-max"><strong>${Math.round(
+                forecastDay.temp.max
+              )}°</strong></span>
+              <span class="forecast-min">/ ${Math.round(
+                forecastDay.temp.min
+              )}°</span></div>
             </div>`;
+    }
   });
 
-  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastHTML + `</span>`;
   forecastElement.innerHTML = forecastHTML;
+
+  icon.innerHTML = `<i class="fas ${
+    icons[response.data.weather[0].icon]
+  }" id="current-weather-icon"></i>`;
 }
 
 let celcuisTemp = null;
@@ -165,7 +185,3 @@ let icons = {
   "50d": "fa-smog", // Mist day
   "50n": "fa-smog", // Mist night
 };
-
-icon.innerHTML = `<i class="fas ${
-  icons[response.data.weather[0].icon]
-}" id="current-weather-icon"></i>`;
