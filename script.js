@@ -76,6 +76,28 @@ function showTemp(response) {
   humidity.innerHTML = Math.round(response.data.main.humidity);
 }
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row gy-5">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-sm">
+      <span class="heading">${day}</span>
+         <div class="emoji"><i class="far fa-sun sun"></i></div>
+
+           <div>
+               <span class="forecast-max"><strong>80°</strong></span>
+               <span class="forecast-min">/ 45°</span></div>
+            </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celcuisTemp = null;
 
 let locationButton = document.querySelector("#location-button");
@@ -110,6 +132,7 @@ function displayCelTemp(event) {
 }
 
 search("Dallas");
+showForecast();
 
 //// Added icons and function for forecast
 

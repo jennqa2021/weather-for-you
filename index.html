@@ -38,20 +38,17 @@
             <i class="fas fa-search-location"></i>
           </button>
         </form>
-<div class="row">
-  <div class="col-6">
-
-        <h1 class="city" id="city"></h1>
-        <ul>
-          <li class="currentEvent" id="date"></li>
-          <li class="currentEvent" id="temperature-description"></li>
-        </ul>
-</div>
-<div class="col-6 high-low">
+        <div class="row">
+          <div class="col-6">
+            <h1 class="city" id="city"></h1>
             <ul>
-              <li>
-                 Humidity: <span id="humidity"></span>%
-              </li>
+              <li class="currentEvent" id="date"></li>
+              <li class="currentEvent" id="temperature-description"></li>
+            </ul>
+          </div>
+          <div class="col-6 high-low">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
               <li>Wind:<span id="wind"></span> Km/H</li>
             </ul>
           </div>
@@ -64,50 +61,20 @@
               <a href="#" id="fahrenheit-link">°F</a>
             </span>
 
-            <img src="#" id="icon"/>
+            <img src="#" id="icon" />
           </div>
-          
 
-        <div class="container overflow-hidden">
-          <div class="row gy-5">
-            <div class="col-sm">
-              <span class="heading"> Monday </span>
-              <div class="emoji"><i class="far fa-sun sun"></i></div>
-
-              <div>
-                <span class="forecast-max"><strong>80°</strong></span>
-                <span class="forecast-min">/ 45°</span></div>
-            </div>
-            <div class="col-sm">
-              <span class="heading"> Tuesday</span>
-              <div class="emoji"><i class="far fa-sun"></i></div>
-              <div><strong>86°</strong>/ 45°</div>
-            </div>
-            <div class="col-sm">
-              <span class="heading"> Wednesday</span>
-              <div class="emoji"><i class="fas fa-cloud-sun-rain"></i></div>
-              <div><strong>70°</strong>/ 36°</div>
-            </div>
-            <div class="col-sm">
-              <span class="heading"> Thursday</span>
-              <div class="emoji">
-                <i class="fas fa-cloud-showers-heavy"></i>
-              </div>
-              <div><strong>89°</strong> / 56°</div>
-            </div>
-            <div class="col-sm">
-              <span class="heading"> Friday</span>
-              <div class="emoji"><i class="far fa-sun sun"></i></div>
-              <div><strong>83°</strong>/ 49°</div>
-            </div>
-          </div>
+          <div class="container overflow-hidden" id="forecast"></div>
         </div>
 
         <footer>
-          <a href="https://github.com/jennqa2021/weather-for-you"
+          <a
+            href="https://github.com/jennqa2021/weather-for-you"
             target="_blank"
             class="gitLink"
-            >Open-source code</a> by
+            >Open-source code</a
+          >
+          by
           <span class="signature">Jennifer Lumley </span>
         </footer>
         <br />
