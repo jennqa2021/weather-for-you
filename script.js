@@ -51,6 +51,13 @@ function currentPosition(position) {
   axios.get(apiUrl).then(showTemp);
 }
 
+function getForecast(coordinates) {
+  let apiKey = "d89748fc4cee1bf5df210fac0fce9c47";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(showForecast);
+}
+
 function showTemp(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentPlace = response.data.name;
@@ -74,9 +81,12 @@ function showTemp(response) {
   );
 
   humidity.innerHTML = Math.round(response.data.main.humidity);
+
+  getForecast(response.data.coord);
 }
 
-function showForecast() {
+function showForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row gy-5">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
@@ -86,11 +96,11 @@ function showForecast() {
       `
     <div class="col-sm">
       <span class="heading">${day}</span>
-         <div class="emoji"><i class="far fa-sun sun"></i></div>
-
-           <div>
-               <span class="forecast-max"><strong>80°</strong></span>
-               <span class="forecast-min">/ 45°</span></div>
+         <div class="emoji"><i class="far fa-sun sun"></i>
+         </div>
+         <div>
+              <span class="forecast-max"><strong>80°</strong></span>
+              <span class="forecast-min">/ 65°</span></div>
             </div>`;
   });
 
@@ -132,7 +142,6 @@ function displayCelTemp(event) {
 }
 
 search("Dallas");
-showForecast();
 
 //// Added icons and function for forecast
 
