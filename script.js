@@ -104,11 +104,9 @@ function showForecast(response) {
         `
     <div class="col-sm">
       <span class="heading">${formatForecast(forecastDay.dt)}</span>
-         <img class="emoji"
-         src="http://openweathermap.org/img/wn/${
-           forecastDay.weather[0].icon
-         }@2x.png"
-         width="42"
+         <i class="fas forecastIcons emoji ${
+           icons[forecastDay.weather[0].icon]
+         }"></i>
          <div>
               <span class="forecast-max"><strong>${Math.round(
                 forecastDay.temp.max
