@@ -102,7 +102,7 @@ function showForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="col-sm">
+    <div class="col-2">
       <span class="heading">${formatForecast(forecastDay.dt)}</span>
          <i class="fas forecastIcons emoji ${
            icons[forecastDay.weather[0].icon]
