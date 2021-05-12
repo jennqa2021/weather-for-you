@@ -54,7 +54,7 @@ function currentPosition(position) {
 function getForecast(coordinates) {
   let apiKey = "d89748fc4cee1bf5df210fac0fce9c47";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(showForecast);
 }
 
@@ -108,7 +108,7 @@ function showForecast(response) {
            icons[forecastDay.weather[0].icon]
          }"></i>
          <div>
-              <span class="forecast-max"><strong>${Math.round(
+              <span class="forecast-max" id="forecast-max"><strong>${Math.round(
                 forecastDay.temp.max
               )}°</strong></span>
               <span class="forecast-min">/ ${Math.round(
@@ -120,10 +120,6 @@ function showForecast(response) {
 
   forecastHTML = forecastHTML + `</span>`;
   forecastElement.innerHTML = forecastHTML;
-
-  icon.innerHTML = `<i class="fas ${
-    icons[response.data.weather[0].icon]
-  }" id="current-weather-icon"></i>`;
 }
 
 let celcuisTemp = null;
@@ -161,7 +157,7 @@ function displayCelTemp(event) {
 
 search("Dallas");
 
-//// Added icons and function for forecast
+//// Added custom icons for forecast
 
 let icons = {
   "01d": "fa-sun", // Clear sky day,
