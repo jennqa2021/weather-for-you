@@ -88,7 +88,7 @@ function showTemp(response) {
 function formatForecast(timestamp) {
   let date = new Date(timestamp * 1000);
   let fday = date.getDay();
-  let fdays = ["Sunday", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let fdays = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
   return fdays[fday];
 }
 
@@ -103,7 +103,7 @@ function showForecast(response) {
         forecastHTML +
         `
     <div class="col-2">
-      <span class="heading">${formatForecast(forecastDay.dt)}</span>
+      <span class="heading">${formatForecast(forecastDay.dt)} </span>
          <i class="fas forecastIcons emoji ${
            icons[forecastDay.weather[0].icon]
          }"></i>
